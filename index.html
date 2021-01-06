@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RTW 2020 Distance Calculator</title>
+    <style>
+       /* Set the size of the div element that contains the map */
+
+    </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+  
+  <body>
+
+    <header>
+      <div id="titles">
+      <div id="title">ROUND THE WORLD 2020</div>
+      <div id="subheading">Distance Calculator</div>
+      </div>
+      <a href="http://www.kamilimentalhealth.org/donate" target="_blank">
+      <button id="donateButton">Donate</button>
+      </a>
+    </header>
+    <!--The div elements for the map and message -->
+    <div id="map"></div>
+    
+    <div id="ui">
+
+
+      <div class="weekLocation" id="location1" onmouseover="bounce(0)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete1" placeholder="Enter an address" value="Uhuru Park, Nairobi, Kenya" />
+      </div>
+
+      <p class="individualDistance" id="distance1">&#8595;&#8595;</p>
+
+      <div class="weekLocation" id="location2" onmouseover="bounce(1)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete2" placeholder="Enter an address" value="Windsor Castle, Windsor, UK"/>
+      </div>
+
+      <p class="individualDistance" id="distance2">&#8595;&#8595;</p>
+
+      <div class="weekLocation" id="location3" onmouseover="bounce(2)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete3" placeholder="Enter an address" value="The Defence of Sevastopol Museum, Sevastopol, Russia"/>
+      </div>
+
+      <p class="individualDistance" id="distance3">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location4" onmouseover="bounce(3)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete4" placeholder="Enter an address" value="Eden Gardens, Kolkata, India"/>
+      </div>
+
+      <p class="individualDistance" id="distance4">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location5" onmouseover="bounce(4)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete5" placeholder="Enter an address" value="Mandalay Palace, Mandalay, Myanmar"/>
+      </div>
+
+      <p class="individualDistance" id="distance5">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location6" onmouseover="bounce(5)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete6" placeholder="Enter an address" value="Botanic Gardens, Wellington, New Zealand"/>
+      </div>
+
+      <p class="individualDistance" id="distance6">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location7" onmouseover="bounce(6)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete7" placeholder="Enter an address" value="The Witches' Market, La Paz, Bolivia"/>
+      </div>
+
+      <p class="individualDistance" id="distance7">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location8" onmouseover="bounce(7)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete8" placeholder="Enter an address" value="Fenway Park, Boston, USA"/>
+      </div>
+
+      <p class="individualDistance" id="distance8">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location9" onmouseover="bounce(8)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete9" placeholder="Enter an address" value="Santa Claus Village, Rovaniemi, Finland"/>
+      </div>
+
+      <p class="individualDistance" id="distance9">&#8595;&#8595;</p>
+
+
+      <div class="weekLocation" id="location10" onmouseover="bounce(9)" onmouseleave="debounce(0)">
+        <input type="text" id="txtautocomplete10" placeholder="Enter an address" value="Freddie Mercury Museum, Zanzibar"/>
+      </div>
+
+      
+    </div>
+
+    <div id="results">
+
+    <div id="resultsButtons">
+      <button id="drawButton" onclick="preAnimate()" type="submit">Calculate Distance!</button>
+      <button id="clearButton" onclick="clearLines()" disabled type=>Reset!</button>
+      <button id="typeButton" type=><--- Type in your own places or try</button>
+      <button id="randomButton" onclick="randomCities()">Random Cities! (experimental)</button>
+      <br>
+    </div>
+
+    <div id="resultsDisplay" visible='false'>
+      <label id="legs"></label><br>
+      <label id="km"></label><br>
+      <label id="miles"></label><br>
+      <label id="foot"></label><br>
+      <label id="car"></label><br>
+      <label id="plane"></label><br>
+      <label id="bubblecraft"></label><br>
+
+      <p id="smallprint" hidden>(in a straight line) (without stopping)<br>
+        Distances calculated using the <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine formula</a><br>
+        Created by Seb Read
+      </p>
+    </div>
+    </div>
+  </div>
+    
+
+    <script src="main.js"> </script>
+
+<!--Load the API from the specified URL -- remember to replace YOUR_API_KEY-->
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQVo1jnAuYngVDKFys2XjxItMxWj3QP8&callback=initMap&libraries=places">
+    </script>
+
+  </body>
+</html>

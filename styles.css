@@ -1,0 +1,163 @@
+
+
+
+
+* {
+    font-family: 'Roboto';
+}
+
+header {
+    width: 100%;
+    font-size: 70px;
+    font-weight: 300;
+    color: lightgray;
+    line-height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#donateButton {
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    color: gray;
+    background-color: white;
+}
+
+#donateButton:hover {
+    color: white;
+    background-color: green;
+}
+
+#subheading {
+    font-size: 40px;
+}
+
+#map {
+    height: 620px;
+    width: 45%;
+   }
+
+body {
+    display: flex;
+    font-size: large;
+    background-color: darkgrey;
+    flex-wrap: wrap;
+}
+
+#ui {
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 1px;
+    width: 25%;
+    height: 620px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.weekLocation {
+    padding: 1%;
+}
+
+button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Roboto;
+    margin: 8px;
+}
+
+button:hover {
+    background-color: white;
+    color: grey;
+    transition-duration: 200ms;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 5px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin: 0%;
+}
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#resultsButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#distance {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: bold;
+    flex-basis: 100%;
+}
+
+#results {
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    font-family: roboto;
+    font-size: 35px;
+    font-style: bold;
+    border-radius: 5px;
+    width: 29%;
+    max-height: 622px;
+
+}
+
+#resultsDisplay {
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+#smallprint {
+    font-size: 12px;
+    font-style: italic;
+}
+
+label {
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.individualDistance {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #map {
+        width: 100%;
+    }
+
+    #ui {
+        width: 40%;
+    }
+
+    #results {
+        width: 59%;
+    }
+}
