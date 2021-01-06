@@ -83,7 +83,7 @@ function initMap() {
       document.getElementById('map'), options);
   // Locations of landmarks
   startLocations = [
-      {lat: -1.2903935, lng: 36.8165834},
+      {lat: -1.28852470134971, lng: 36.81357015404334},
       {lat: 51.48389399999999, lng: -0.6044026999999998},
       {lat: 44.5955556, lng: 33.5233333},
       {lat: 22.5646081, lng: 88.34326449999999},
@@ -92,7 +92,7 @@ function initMap() {
       {lat: -16.4964949, lng: -68.13901609999999},
       {lat: 42.3466764, lng: -71.0972178},
       {lat: 66.5436144, lng: 25.8471974},
-      {lat: -6.162249099999999, lng: 39.1878026},
+      {lat: -6.162631115008075, lng: 39.18569869788208},
   ]
 
   let timeDelay = 1;
